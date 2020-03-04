@@ -15,9 +15,9 @@ public class VehicleServiceImpl implements VehicleService {
 	private VehicleRepository vehicleRepository;
 	
 	@Override
-	public List<Vehicle> findVehiclesByCity(float lowerLeftXCoord, float upperRightXCoord, float lowerLeftYCoord,
+	public List<Vehicle> findVehiclesByCity(String cityName, float lowerLeftXCoord, float upperRightXCoord, float lowerLeftYCoord,
 			float upperRightYCoord, List<Integer> companyIds) {
-		return vehicleRepository.findVehiclesByCity(lowerLeftXCoord, upperRightXCoord, 
+		return vehicleRepository.findVehiclesByCity(cityName, lowerLeftXCoord, upperRightXCoord, 
 				                                    lowerLeftYCoord, upperRightYCoord, companyIds);
 	}
 }
